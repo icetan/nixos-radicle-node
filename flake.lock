@@ -1,0 +1,176 @@
+{
+  "nodes": {
+    "advisory-db": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1701193254,
+        "narHash": "sha256-Hr7efA3GjwqBkGYKmd3XmGckdPQikbcCmOrq7fmTp3A=",
+        "owner": "rustsec",
+        "repo": "advisory-db",
+        "rev": "43af5fef0591531a72ebb86c5f1c623ee95c62fe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rustsec",
+        "repo": "advisory-db",
+        "type": "github"
+      }
+    },
+    "crane": {
+      "inputs": {
+        "nixpkgs": [
+          "heartwood",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1712180168,
+        "narHash": "sha256-sYe00cK+kKnQlVo1wUIZ5rZl9x8/r3djShUqNgfjnM4=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "06a9ff255c1681299a87191c2725d9d579f28b82",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
+    "flake-compat": {
+      "locked": {
+        "lastModified": 1709944340,
+        "narHash": "sha256-xr54XK0SjczlUxRo5YwodibUSlpivS9bqHt8BNyWVQA=",
+        "type": "tarball",
+        "url": "https://github.com/9999years/flake-compat/archive/refs/heads/fix-64.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/9999years/flake-compat/archive/refs/heads/fix-64.tar.gz"
+      }
+    },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1701680307,
+        "narHash": "sha256-kAuep2h5ajznlPMD9rnQyffWG8EM/C73lejGofXvdM8=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "4022d587cbbfd70fe950c1e2083a02621806a725",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "heartwood": {
+      "inputs": {
+        "advisory-db": "advisory-db",
+        "crane": [
+          "crane"
+        ],
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs",
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1712151708,
+        "narHash": "sha256-qzGFUsNCNk+aDXwzC2mAzRzcPkfLueI/fILwclgkxsE=",
+        "owner": "radicle-dev",
+        "repo": "heartwood",
+        "rev": "ea69168f44b1b5a1cfde6e84def408895f6c0b65",
+        "type": "github"
+      },
+      "original": {
+        "owner": "radicle-dev",
+        "repo": "heartwood",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1701961404,
+        "narHash": "sha256-ieWHyh6kJtabQYUam/dXXi22MgcgLQvl+f2x/95n+us=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "8fef9eee026f0d95c06b5880ef9c1af0f643aadf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "release-23.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1712218641,
+        "narHash": "sha256-WPMhVXejz+wHU2BjMPrMx2irO1eyVIrU5QlSYwH91iU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "83fcc85e1b23dc3d0e2eb0ee9bcbf04e6dce4d4c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "crane": "crane",
+        "flake-compat": "flake-compat",
+        "heartwood": "heartwood",
+        "nixpkgs": "nixpkgs_2"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "flake-utils": [
+          "heartwood",
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "heartwood",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1711419061,
+        "narHash": "sha256-+5M/czgYGqs/jKmi8bvYC+JUYboUKNTfkRiesXopeXQ=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "4c11d2f698ff1149f76b69e72852d5d75f492d0c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
